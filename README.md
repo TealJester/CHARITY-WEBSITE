@@ -1,2 +1,1 @@
-# CHARITY-WEBSITE
-charity website
+https://tealjester.github.io/CHARITY-WEBSITE/
