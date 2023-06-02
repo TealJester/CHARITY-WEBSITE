@@ -1,0 +1,74 @@
+                                                                      2. SYSTEM ANALYSIS
+This System Analysis is closely related to requirements analysis. It is also "an explicit formal
+inquiry carried out to help someone (referred to as the decision maker) identify a better course
+of action and make a better decision than he might otherwise have made." This step involves
+breaking down the system in different pieces to analyze the situation, analyzing project goals,
+breaking down what needs to be created and attempting to engage users so that definite
+requirements can be defined
+
+
+              Databases Intro
+• Storing data on disk (EFS, EBS, EC2 Instance Store, S3) can have its limits 
+• Sometimes, you want to store data in a database…
+• You can structure the data
+• You build indexes to efficiently query / search through the data
+• You define relationships between your datasets
+• Databases are optimized for a purpose and come with different 
+features, shapes and constraint
+
+
+
+Databases & Shared Responsibility on AWS
+• AWS offers use to manage different databases
+• Benefits include:
+• Quick Provisioning, High Availability, Vertical and Horizontal Scaling
+• Automated Backup & Restore, Operations, Upgrades
+• Operating System Patching is handled by AWS
+• Monitoring, alerting
+• Note: many databases technologies could be run on EC2, but you must 
+handle yourself the resiliency, backup, patching, high availability, fault 
+tolerance, scaling…
+
+
+
+
+AWS RDS Overview 
+• RDS stands for Relational Database Service
+• It’s a managed DB service for DB use SQL as a query language. 
+• It allows you to create databases in the cloud that are managed by AWS
+• Postgres
+• MySQL
+• MariaDB
+• Oracle
+• Microsoft SQL Server
+• Aurora (AWS Proprietary database)
+
+
+
+Advantage over using RDS versus deploying 
+DB on EC2
+• RDS is a managed service:
+• Automated provisioning, OS patching
+• Continuous backups and restore to specific timestamp (Point in Time Restore)!
+• Monitoring dashboards
+• Read replicas for improved read performance
+• Multi AZ setup for DR (Disaster Recovery)
+• Maintenance windows for upgrades
+• Scaling capability (vertical and horizontal)
+• Storage backed by EBS (gp2 or io1)
+• BUT you can’t SSH into your instance
+
+
+
+
+
+DynamoDB 
+• Fully Managed Highly available with replication across 3 AZ
+• NoSQL database - not a relational database 
+• Scales to massive workloads, distributed “serverless” database
+• Millions of requests per seconds, trillions of row, 100s of TB of storage
+• Fast and consistent in performance 
+• Single-digit millisecond latency – low latency retrieval
+• Integrated with IAM for security, authorization and administration
+• Low cost and auto scaling capabilities
+• Standard & Infrequent Access (IA) Table Class
